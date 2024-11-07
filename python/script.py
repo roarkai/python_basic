@@ -1,7 +1,9 @@
-# -*- coding: latin-1 -*-
+# -*- coding: utf-8
+import sys
+print(sys.path)
 
-x = chr(0xc4) + chr(0xe8)  # x和y是相同的两个拉丁字符
-y = '\xc4\xe8'             # '\xc4\xe8'是这两个字符对应的latin-1码值
+x = '文本'
+y = '\xc4\xe8'
 for i in x, y:
-    print(f"{i},{i.encode()},  {i.encode('latin-1')}")
+    print(f'{i}, {len(i)},{i.encode()},  {i.encode(''utf-8)}')
 
